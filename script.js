@@ -10,4 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+
+    const navbar = document.querySelector('.navbar');
+    const homeSection = document.querySelector('#home');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > homeSection.offsetHeight) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 });
+
