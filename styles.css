@@ -1,0 +1,210 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");*/
+@font-face {
+    font-family: 'Harabara Mais Demo';
+    src: url('fonts/HarabaraMaisDemo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Stellar light", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url(images/b1.png) repeat-y;
+    background-size: cover;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent; /* Made slightly transparent for visibility */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 50px;
+    color: #3ebec1;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: "Harabara Mais Demo", sans-serif;
+}
+
+.navbar a {
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.section {
+    font-family:"Stellar Light";
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #3ebec1; 
+}
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(104, 157, 159, 0.5)), url('images/bg3.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.content-container {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Vertically center content */
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto; /* Center container within section */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.text-container {
+    max-width: 100%; /* Adjust based on your content and image size */
+    margin-bottom: -100px;
+}
+
+.image-container img {
+    max-width: 1000px; /* Ensure image is responsive */
+    height:500px; /* Maintain aspect ratio */
+    margin-right: -50px;
+}
+
+#home h1 {
+    font-family: 'Harabara Mais Demo', Arial, sans-serif;
+    max-width: 700px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 5px; 
+}
+
+#home p {
+    margin-bottom: 20px; 
+    color: #ffffff; 
+    font-size: 20px; 
+}
+
+
+.content-container {
+    max-width: 1100px; 
+    width: 100%;
+    padding-left: 0px; 
+    box-sizing: border-box; 
+}
+
+
+.get-tickets-btn {
+    font-family: "Stellar Medium";
+    margin-top: 50px;
+    display: inline-block;
+    background-color: #3ebec1; 
+    color: white;
+    padding: 15px 30px; 
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px; 
+    transition: background-color 0.3s ease;
+}
+
+.get-tickets-btn:hover {
+    background-color: #35a5a1; 
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .logo {
+        font-size: 30px; /* Reduce logo size on smaller screens */
+    }
+
+    .navbar a {
+        margin-left: 20px; /* Reduce margin between nav links on smaller screens */
+        font-size: 16px; /* Reduce font size for nav links on smaller screens */
+    }
+
+    .section {
+        padding: 20px; /* Reduce padding in sections on smaller screens */
+    }
+
+    #home .content-container {
+        flex-direction: column; /* Stack text-container and image-container vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    #home .text-container, #home .image-container {
+        max-width: 100%; /* Allow text and image to use full width */
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
+    .image-container {
+        order: -1; /* Move the image container to the top */
+    }
+
+    #home .image-container img {
+        max-width: 100%; /* Ensure image scales down */
+        height: auto; /* Adjust height automatically */
+        margin-right: 0; /* Reset any negative margin */
+        margin-bottom: 20px;
+    }
+
+    #home h1 {
+        font-size: 30px; /* Reduce font size of the main title */
+        margin-bottom: 10px; /* Adjust margin below title */
+    }
+
+    #home p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .get-tickets-btn {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 18px; /* Adjust button font size */
+        margin-top: 30px; /* Adjust margin above button */
+    }
+}
