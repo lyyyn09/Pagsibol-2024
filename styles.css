@@ -10,17 +10,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Stellar light", sans-serif;
+    font-family: "Stellar Light", sans-serif;
 }
 
 body {
     min-height: 100vh;
     background: url(images/b1.png) repeat-y;
     background-size: cover;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth; 
 }
-
-
 
 .header {
     position: fixed;
@@ -28,7 +26,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: transparent; /* Made slightly transparent for visibility */
+    background: transparent; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +40,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     font-family: "Harabara Mais Demo", sans-serif;
+
 }
 
 .navbar a {
@@ -51,6 +50,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     margin-left: 40px;
+    transition: color .5s ease;
 }
 
 .navbar a::before {
@@ -68,6 +68,10 @@ body {
     width: 100%;
 }
 
+.navbar.scrolled a {
+    color: #3ebec1; 
+}
+
 .section {
     font-family:"Stellar Light";
     min-height: 100vh;
@@ -78,37 +82,42 @@ body {
     flex-direction: column;
     color: #3ebec1; 
 }
-
+/*104, 157, 159* BLUE/
+/*56, 135, 87, GREEN*/
 #home {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(104, 157, 159, 0.5)), url('images/bg3.jpeg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     text-align: left;
+    padding: 50px 20px; /* Adjusted padding */
 }
 
 .content-container {
-    display: flex; /* Enable Flexbox */
-    justify-content: space-between; /* Space between text and image */
-    align-items: center; /* Vertically center content */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     max-width: 1500px;
     width: 100%;
-    margin: 0 auto; /* Center container within section */
-    padding: 0 20px; /* Add some padding on the sides */
+    margin: 0 auto; 
+    padding: 0 20px;
 }
 
 .text-container {
-    max-width: 100%; /* Adjust based on your content and image size */
-    margin-bottom: -100px;
+    max-width: 100%; 
+    margin-bottom: -10px;
 }
 
 .image-container img {
-    max-width: 1000px; /* Ensure image is responsive */
-    height:500px; /* Maintain aspect ratio */
+    max-width: 500px; 
+    height:500px; 
     margin-right: -50px;
+    padding-top: 30px;
 }
 
 #home h1 {
@@ -122,7 +131,7 @@ body {
 }
 
 #home p {
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
     color: #ffffff; 
     font-size: 20px; 
 }
@@ -132,12 +141,13 @@ body {
     max-width: 1100px; 
     width: 100%;
     padding-left: 0px; 
+    align-items: center;
     box-sizing: border-box; 
 }
 
 
 .get-tickets-btn {
-    font-family: "Stellar Medium";
+    font-family: "Stellar Regular";
     margin-top: 50px;
     display: inline-block;
     background-color: #3ebec1; 
@@ -148,63 +158,128 @@ body {
     font-weight: bold;
     border-radius: 10px; 
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .get-tickets-btn:hover {
     background-color: #35a5a1; 
 }
 
+
+.partners {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500pt;
+}
+
+.partners div {
+    margin: 50px;
+}
+
+.partners img {
+    width: 200px; 
+    height: auto;
+}
+
+.industry-partner img {
+    width: 100px; 
+    padding-left: 20px; 
+}
+
+.footer {
+    background-color: #232323;
+    color: #ffffff;
+    padding: 20px; /* Adjust padding for compactness */
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Adjust based on content */
+    align-items: center;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info p,
+.contact-info a {
+    margin: 5px 0; /* Reduced margin */
+    color: inherit; /* Ensures text and links are white */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.copyright p{
+    font-family: "Harabara Mais Demo";
+    margin-right: 200pt;
+}
+
+
+
 @media (max-width: 768px) {
     .header {
-        padding: 20px; /* Reduce padding on smaller screens */
+        padding: 20px; 
     }
 
     .logo {
-        font-size: 30px; /* Reduce logo size on smaller screens */
+        font-size: 30px; 
     }
 
     .navbar a {
-        margin-left: 20px; /* Reduce margin between nav links on smaller screens */
-        font-size: 16px; /* Reduce font size for nav links on smaller screens */
+        margin-left: 20px; 
+        font-size: 16px; 
     }
 
     .section {
-        padding: 20px; /* Reduce padding in sections on smaller screens */
+        padding: 20px; 
     }
 
     #home .content-container {
-        flex-direction: column; /* Stack text-container and image-container vertically */
-        padding: 20px; /* Adjust padding */
+        flex-direction: column; 
+        padding: 20px; 
     }
 
     #home .text-container, #home .image-container {
-        max-width: 100%; /* Allow text and image to use full width */
-        margin-bottom: 20px; /* Add space between text and image */
+        max-width: 100%; 
+        margin-bottom: 20px; 
     }
 
     .image-container {
-        order: -1; /* Move the image container to the top */
+        order: -1; 
     }
 
     #home .image-container img {
-        max-width: 100%; /* Ensure image scales down */
-        height: auto; /* Adjust height automatically */
-        margin-right: 0; /* Reset any negative margin */
+        max-width: 100%; 
+        height: auto; 
+        margin-right: 0; 
         margin-bottom: 20px;
     }
 
     #home h1 {
-        font-size: 30px; /* Reduce font size of the main title */
-        margin-bottom: 10px; /* Adjust margin below title */
+        font-size: 30px; 
+        margin-bottom: 10px; 
     }
 
     #home p {
-        font-size: 16px; /* Adjust paragraph font size */
+        font-size: 16px; 
     }
 
     .get-tickets-btn {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 18px; /* Adjust button font size */
-        margin-top: 30px; /* Adjust margin above button */
+        padding: 10px 20px; 
+        font-size: 18px; 
+        margin-top: 30px; 
     }
+
+    .footer-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .contact-info, .copyright {
+        margin: 10px 0; /* Add some margin on top and bottom when stacked */
+    }
+
+    
 }
